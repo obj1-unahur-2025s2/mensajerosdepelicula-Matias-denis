@@ -1,13 +1,16 @@
 import mensajeros.*
 import vehiculos.*
+import destinos.*
+import paquete.*
+
 
 
 describe "Grupo de tests de Mensajeros de película" {
 
   test "Que roberto (90kg) puede llevar un paquete que está pago en un camión que tiene un acoplado." {
-    roberto.peso(90)
+    roberto.peso()
     roberto.cambiarVehiculo(camion)
-    camion.agregarAcoplados(1)
+    camion.cantidadAcoplados(1)
     assert.that(roberto.puedeEntregar(paquete))
   }
 
